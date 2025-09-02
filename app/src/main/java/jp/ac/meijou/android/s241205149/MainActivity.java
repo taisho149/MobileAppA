@@ -16,6 +16,7 @@ import jp.ac.meijou.android.s241205149.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
+    private PrefDataStore prefDataStore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -30,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        prefDataStore = PrefDataStore.getInstance(this);
+        binding.button2.setOnClickListener(view -> {
+            var text = binding.editTextText.getText().toString();
+            prefDataStore.setString("name", text);
+        });
+        
         binding.button.setOnClickListener(view -> {
             var text = binding.editTextText.getText().toString();
 
@@ -50,7 +58,10 @@ public class MainActivity extends AppCompatActivity {
             public void afterTextChanged(Editable editable) {
                 // テキストが更新されたあとに呼ばれる
                 binding.text.setText(editable.toString());
+
+
             }
+
         });
 
     }

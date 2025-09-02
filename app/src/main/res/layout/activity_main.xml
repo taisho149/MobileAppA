@@ -9,46 +9,57 @@
 
     <TextView
         android:id="@+id/text"
-        android:layout_width="173dp"
-        android:layout_height="109dp"
+        android:layout_width="218dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
         android:text="@string/text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.448" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="189dp"
-        android:layout_height="166dp"
-        android:layout_marginBottom="112dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/ic_android_black_24dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="17dp" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginBottom="100dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="32dp"
+        android:text="Change"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
+        android:layout_marginStart="24dp"
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/text"
-        tools:layout_editor_absoluteX="86dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="133dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="315dp"
+        android:layout_height="191dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_android_black_24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
