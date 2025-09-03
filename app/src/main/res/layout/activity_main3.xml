@@ -55,9 +55,9 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:text="+"
-        app:layout_constrainEnd_toEndOf="@+id/textView4"
-        app:layout_constraintBottom_toTopOf="@+id/button10"
-        app:layout_constraintEnd_toEndOf="@+id/button10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@id/button5"
+        app:layout_constraintBottom_toTopOf="@+id/button10" />
 
     <Button
         android:id="@+id/button7"
